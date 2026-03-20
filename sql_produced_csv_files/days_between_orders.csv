@@ -1,0 +1,6 @@
+purchase_window,customers,helper
+0-7 days,199,1
+8-30 days,388,2
+31- 90 days,492,3
+91-180 days,413,4
+180+ days,480,5
