@@ -220,8 +220,8 @@ While revenue is concentrated in major hubs, the orders per customer remain stab
 
 
 
+![Days Between Purchases](images/days_purchases.png?v=2)
 
-![ days between purchases by Segment](images/days_purchases.png)
 
 *Figure 3:  Analysis on how many days between first and second purchase*
 
