@@ -167,13 +167,13 @@ While revenue is concentrated in major hubs, the orders per customer remain stab
 
 **Result:** 974 "Needs Nurturing" customers identified as highest-leverage opportunity ($44K potential).
 
-![RFM revenue by Segment](/Users/eoghankealy/Documents/data_projects/brazil_retail_SQL/images/rfm_revenue.png)
+![RFM revenue by Segment](images/rfm_revenue.png)
 
 *Figure 1: RFM revenue analysis on 3% who actually made 2 or more purchases*
 
 
 
-![RFM Customer Count by Segment](/Users/eoghankealy/Documents/data_projects/brazil_retail_SQL/images/rfm_customer_count.png)
+![RFM Customer Count by Segment](images/rfm_customer_count.png)
 
 *Figure 2: RFM customer count by segment of 3% who actually made 2 or more purchases*
 
@@ -221,7 +221,7 @@ While revenue is concentrated in major hubs, the orders per customer remain stab
 
 
 
-![ days between purchases by Segment](/Users/eoghankealy/Documents/data_projects/brazil_retail_SQL/images/days_purchases.png)
+![ days between purchases by Segment](images/days_purchases.png)
 
 *Figure 3:  Analysis on how many days between first and second purchase*
 
