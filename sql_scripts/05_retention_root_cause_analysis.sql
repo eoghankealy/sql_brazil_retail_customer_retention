@@ -639,3 +639,66 @@ JOIN (
 ) c_counts ON c.customer_unique_id = c_counts.customer_unique_id
 WHERE o.order_status = 'delivered'
 GROUP BY 1;
+
+
+
+-- Query: Category-Specific Engagement & Retention
+-- Objective: To measure the "loyalty profile" of each product category by calculating 
+-- the percentage of its customer base that are multi-order users.
+
+WITH customer_total_orders AS (
+    SELECT
+        c.customer_unique_id,
+        COUNT(DISTINCT o.order_id) AS total_orders
+    FROM cleaned.orders o
+    JOIN cleaned.customers c 
+        ON o.customer_id = c.customer_id
+    WHERE o.order_status = 'delivered'
+    GROUP BY c.customer_unique_id
+),
+
+category_customers AS (
+    SELECT DISTINCT
+        c.customer_unique_id,
+        t.product_category_name_english -- Updated to English column
+    FROM cleaned.orders o
+    JOIN cleaned.customers c 
+        ON o.customer_id = c.customer_id
+    JOIN cleaned.order_items oi 
+        ON o.order_id = oi.order_id
+    JOIN cleaned.products p 
+        ON oi.product_id = p.product_id
+    -- Join added to fetch the translation
+    JOIN cleaned.product_category_name_translation t
+        ON p.product_category_name = t.product_category_name
+    WHERE o.order_status = 'delivered'
+)
+
+SELECT
+    cc.product_category_name_english, -- Updated reference
+    COUNT(DISTINCT cc.customer_unique_id) AS total_customers,
+    COUNT(DISTINCT CASE 
+        WHEN cto.total_orders >= 2 THEN cc.customer_unique_id 
+    END) AS repeat_customers,
+    ROUND(
+        COUNT(DISTINCT CASE 
+            WHEN cto.total_orders >= 2 THEN cc.customer_unique_id 
+        END) * 100.0 
+        / NULLIF(COUNT(DISTINCT cc.customer_unique_id), 0),
+        2
+    ) AS repeat_rate_percentage
+FROM category_customers cc
+JOIN customer_total_orders cto
+    ON cc.customer_unique_id = cto.customer_unique_id
+GROUP BY cc.product_category_name_english -- Updated reference
+ORDER BY repeat_rate_percentage DESC;
+
+/* =========================================================
+   There is some variation, but it's not always in the direction you might expect, 
+   for example, categories like Furniture & Decor (7.2%) and Computers & Accessories (4.2%) 
+   perform similarly or better than some consumable categories like Health & Beauty (4.0%), 
+   even over the 3-year period. A few categories do show higher repeat rates (e.g. Home Appliances ~10%), 
+   but they tend to have relatively small customer bases. Across the higher-volume categories, 
+   repeat rates generally cluster around 2.5%-3.5%, 
+   so the overall picture doesn't change much - most customers are still one-time buyers.
+   ========================================================= */

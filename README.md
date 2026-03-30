@@ -566,3 +566,15 @@ Dataset: [Olist Brazilian E-Commerce Public Dataset](https://www.kaggle.com/data
 *This project illustrates how I use SQL not just for querying data, but for diagnosing business performance, quantifying opportunities, and driving strategy. I’m passionate about bringing this kind of analysis to a data-driven team.*
 
 
+## 🔄 Project Iteration: Addressing Peer Feedback
+Following the initial publication of this project on LinkedIn, a peer suggested a deep dive into whether specific product categories (e.g., durables vs. consumables) were the primary drivers of the 97% churn rate.
+
+Action taken: I performed a secondary SQL analysis to isolate category-specific repeat rates.
+Result: The data (visualized in the scatter plot above) debunked the initial hypothesis. Even "replenishable" goods like Health & Beauty (4.0%) underperformed "durables" like Furniture (7.2%), proving that the retention gap is a cross-category systemic failure.Reults of query are in available in Excel file.
+
+
+![Product Catagory Retention](images/product_catagory_retention.png?v=2)
+
+
+*Figure 4:  Analysis of Product Category 
+Volume vs. Retention Rate*
