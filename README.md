@@ -509,29 +509,34 @@ Both repeat and one-time customers rated 4.15+ stars. The problem isn't operatio
 
 ## 🔮 Next Steps
 
-### Immediate Actions (0-30 days)
-1. Implement welcome email series for new buyers
-2. Launch nurturing campaign for 974 at-risk customers
-3. Deploy win-back campaign for 364 lapsed customers
-4. Set up automated triggers based on 75-day cycle
 
-### Short-Term (1-3 months)
-1. A/B test discount levels (10% vs 15% vs 20%)
-2. Measure baseline conversion rates
-3. Track Champions retention rate
-4. Monitor repeat rate movement (target: 3% → 4.5%)
 
-### Medium-Term (3-6 months)
-1. Implement loyalty program for Champions
-2. Develop category-specific retention strategies
-3. Test personalized product recommendations
-4. Build predictive churn model
+This analysis identified the retention gap and quantified the opportunity. The following steps would be needed to validate and implement these findings:
 
-### Long-Term (6-12 months)
-1. Platform experience improvements
-2. Seller relationship programs
-3. Subscription/membership offerings
-4. Target: 3% → 6% repeat rate (+$864K)
+### Validate Assumptions (0-30 days)
+1. Pilot test with 974 "Needs Nurturing" segment to establish baseline conversion rates
+2. Measure actual response to Day 30/60/90 email cadence
+3. Validate that new repeat customers behave similarly to existing ones ($308.59 avg value)
+4. A/B test intervention timing (30/60/90 days vs alternative schedules)
+
+### Build Infrastructure (1-3 months)
+1. Implement automated email triggers based on 75-day purchase cycle
+2. Develop category-specific messaging (consumables vs durables)
+3. Test discount levels to find optimal conversion without training discount dependency
+4. Monitor Champions retention rate to protect high-value segment
+
+### Scale & Optimize (3-6 months)
+1. Expand successful pilots to broader customer base
+2. Develop predictive churn model using observed behavioral patterns
+3. Create category-specific retention strategies (informed by category analysis)
+4. Track progress toward 3% → 4.5% repeat rate milestone
+
+### Strategic Initiatives (6-12 months)
+1. Evaluate loyalty program ROI based on pilot results
+2. Consider personalized product recommendations for Champions
+3. Assess platform/UX improvements to reduce friction
+4. Long-term goal: 3% → 6% repeat rate (representing $864K opportunity if assumptions hold)
+
 
 ---
 
