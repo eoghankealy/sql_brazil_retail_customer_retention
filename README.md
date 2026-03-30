@@ -565,6 +565,7 @@ Dataset: [Olist Brazilian E-Commerce Public Dataset](https://www.kaggle.com/data
 
 *This project illustrates how I use SQL not just for querying data, but for diagnosing business performance, quantifying opportunities, and driving strategy. I’m passionate about bringing this kind of analysis to a data-driven team.*
 
+---
 
 ## 🔄 Project Iteration: Addressing Peer Feedback
 Following the initial publication of this project on LinkedIn, a peer suggested a deep dive into whether specific product categories (e.g., durables vs. consumables) were the primary drivers of the 97% churn rate.
